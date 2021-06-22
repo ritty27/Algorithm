@@ -8,9 +8,6 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        final int MAX_NUM = 99999999;
-
-        int min = MAX_NUM;
         int n = sc.nextInt();
         int m = sc.nextInt();
         int[] dx = {1, 0, -1, 0};
