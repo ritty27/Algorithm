@@ -4,8 +4,6 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static StringBuilder sb = new StringBuilder();
-
     public static int[] arr;
     public static int n, target, count = 0;
 
