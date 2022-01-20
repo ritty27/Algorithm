@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
 
+
 public class Main {
 
   static long[] tree;
-  static int temp;
 
   public static void main(String[] args) throws IOException {
 
@@ -26,7 +26,7 @@ public class Main {
       String type = st.nextToken();
       if (type.equals("1")) {
         int number = Integer.parseInt(st.nextToken());
-        query(1, s, 1, number);
+        int temp = query(1, s, 1, number);
         update(1, s, 1, temp, -1);
         sb.append(temp).append("\n");
       } else if (type.equals("2")) {
@@ -39,10 +39,9 @@ public class Main {
     System.out.print(sb);
   }
 
-  static long query(int left, int right, int node, long number) {
+  static int query(int left, int right, int node, long number) {
     //값보다 작아서 모두 포함할 경우, 리프 노드인 경우
     if (left == right) {
-      temp = right;
       return right;
     }
     //자식에게 물어볼 경우
@@ -73,3 +72,4 @@ public class Main {
     }
   }
 }
+
